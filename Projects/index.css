@@ -1,0 +1,72 @@
+.chrono-container {
+  width: 500px;
+  height: 800px;
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+}
+.education-card{
+  align-items: start;
+  align-items:left;
+  text-align: left;
+  color:black;
+  font-size:20px;
+}
+
+.TimelineContainer {
+display: flex;
+justify-content: space-around;
+align-items: center;
+min-height: 100vh;
+}
+
+.ResponsiveContainer {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+max-width: 1110px;
+height: 100vh;
+}
+.HeaderContainer{
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-bottom: 30px;
+}
+.Heading{
+text-align: center;
+color: #171f46;
+font-family: 'Roboto';
+font-weight: 500;
+font-size: 18px;
+line-height: 2.7;
+margin: 0px;
+}
+.classHeading{
+margin-top:15px;
+font-size:30px;
+color:white;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.CCBPHeading{
+color: #2b237c;
+font-family: 'Roboto';
+font-weight: 500;
+font-size: 24px;
+margin: 0px;
+}
+.education-bg{
+background-color: rgb(19, 17, 17);
+}
+.education-head{
+color:rgb(6, 71, 97);
+font-family: Arial, Helvetica, sans-serif;
+}
+.education-para{
+color:black;
+font-family: Arial, Helvetica, sans-serif;
+}

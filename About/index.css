@@ -1,0 +1,59 @@
+.bg{
+  background-color: black;
+  color:white;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+.head{
+  padding-bottom:50px;
+  font-weight:500;
+  font-size: 40px;
+}
+.divide{
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  padding:10px;
+  font-size:25px;
+}
+
+.left{
+    padding-left: 50px;
+  padding-right:50px ;
+  padding-top:50px;
+}
+.bg {
+  padding: 20px; /* Add some padding around the background */
+}
+
+.head {
+  text-align: center; /* Center the heading */
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+.divide {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between left and right sections */
+  align-items: center; /* Align items vertically centered */
+}
+
+.left {
+  flex: 1; /* Allow the left section to take up available space */
+  margin-right: 20px; /* Space between left and right sections */
+}
+
+.right {
+  flex: 0 0 auto; /* Prevents the right section from growing */
+}
+
+.image {
+  width: 200px; /* Set a fixed width for the image */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border-radius: 8px; /* Optional: Add rounded corners to the image */
+}
+
+
