@@ -1,0 +1,16 @@
+.ai-bg{
+    display: flex;
+    background-color:#9d7226;
+    border:10px;
+    border-radius: 5px;
+    padding: 50px 50px 50px 50px;
+    margin :150px 150px 150px 150px;
+}
+.ai-leftside-bg{
+    padding:30px 30px 30px 30px;
+}
+
+.ai-rightside-bg{
+
+
+}
