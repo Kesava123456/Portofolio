@@ -1,8 +1,7 @@
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import './index.css';
 
-import './index.css'
-
-const Header = props => {
+const Header = (props) => {
   return (
     <nav className="nav-header">
       <div className="nav-content">
@@ -40,9 +39,14 @@ const Header = props => {
             </Link>
           </li>
           <li>
-            <Link to="/projects" className="nav-link">
+            {/* Use an <a> tag for downloading the resume */}
+            <a
+              href="./files/kesava_resume.pdf" // Update the path to your resume file
+              className="nav-link"
+              download="My_Resume.pdf"
+            >
               Resume
-            </Link>
+            </a>
           </li>
         </ul>
       </div>
@@ -69,6 +73,7 @@ const Header = props => {
         </ul>
       </div>
     </nav>
-  )
-}
-export default Header
+  );
+};
+
+export default Header;
