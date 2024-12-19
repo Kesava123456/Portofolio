@@ -17,6 +17,7 @@ class App extends Component {
     isDarkTheme: false,
   }
 
+
   toggleTheme = () => {
     this.setState(prevState => ({isDarkTheme: !prevState.isDarkTheme}))
   }  
@@ -26,6 +27,7 @@ class App extends Component {
     const {isDarkTheme} = this.state
 
   return(
+    <div>
       <ThemeContext.Provider
             value={{
               isDarkTheme,
@@ -44,10 +46,12 @@ class App extends Component {
         </Routes>
       </BrowserRouter>
     </ThemeContext.Provider>
+    </div>
   ) 
 }   
 }
 export default App;
+
 /*
 
 import React from 'react';
