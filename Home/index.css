@@ -208,4 +208,30 @@ h1 {
 
 
 
+.home-container {
+  position: relative;
+  text-align: center;
+  padding: 20px;
+}
+
+.christmas-image {
+  position: absolute;
+  width: 150px;
+  height: auto;
+}
+
+.left-image {
+  width:150px;
+  height:230px;
+  top: 0%;
+  left: 0%;
+}
+
+.right-image {
+  bottom: 0%;
+  right: 5%;
+  width:300px;
+  height:700px;
+  margin-bottom: 100px;
+}
 
