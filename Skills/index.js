@@ -43,6 +43,14 @@ const Skills = () => {
                             <img src="https://hithish.com/images/skills/react.png" alt="react" className='img' />
                             <p>React JS</p>
                         </div>
+                        <div className='separate-column'>
+                            <img src="./images/redux-logo-landscape.png" alt="redux" className='img' />
+                            <p>React Redux</p>
+                        </div>
+                        <div className='separate-column'>
+                            <img src="./images/icons8-linux-50.png" alt="router" className='img' />
+                            <p>Linux</p>
+                        </div>
                     </div>
 
                     <h3>Tools</h3>
@@ -52,11 +60,15 @@ const Skills = () => {
                             <p>Git</p>
                         </div>
                         <div className='separate-column'>
-                            <img src="https://hithish.com/images/skills/redux.png" alt="github" className='img' />
+                            <img src="./images/github-mark-white.png" alt="github" className='img' />
                             <p>GitHub</p>
                         </div>
                         <div className='separate-column'>
                             <img src="https://hithish.com/images/skills/code.png" alt="vs" className='img' />
+                            <p>VS Code</p>
+                        </div>
+                        <div className='separate-column'>
+                            <img src="./images/icons8-shell-50.png" alt="vs" className='img' />
                             <p>VS Code</p>
                         </div>
                     </div>
