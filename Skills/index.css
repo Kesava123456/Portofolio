@@ -3,7 +3,6 @@
     align-items: center;
     text-align: center; 
     color:white;
-
 }
 .languages-bg{
     align-items: center;
@@ -45,6 +44,7 @@
 .skills-head {
     text-align: center; /* Center the heading */
     margin-bottom: 20px; /* Space below the heading */
+    margin-top:50px;
 }
 
 .skills-para {

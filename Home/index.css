@@ -1,15 +1,19 @@
 .home-container{
-  background-color: black;
+  background-color: rgb(18, 18, 18);
   color:white;
   align-content: center;
   justify-content: center;
   align-items: center;
   text-align: center;
+  position: relative;
+  height:100vh;
+  width: 100%;
 }
 .home-name{
   font-family: "Gill Sans", sans-serif;
   font-size:60px;
-  padding-top:60px;
+  padding-top:140px;
+  padding-bottom: 10px;
   font-style:bold;
 }
 .home-para{
@@ -64,4 +68,45 @@ h1 {
 .icons{
   padding: 115px;
   font-size:40px;
+}
+
+@media (max-width: 768px) {
+  .home-name {
+    font-size: 2.5rem;
+  }
+
+  .future-name {
+    font-size: 1.5rem;
+  }
+
+  .home-para {
+    font-size: 0.9rem;
+  }
+
+  .common-icon {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-name {
+    font-size: 2rem;
+  }
+
+  .future-name {
+    font-size: 1.2rem;
+  }
+
+  .home-para {
+    font-size: 0.8rem;
+  }
+
+  .icons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .common-icon {
+    font-size: 1.2rem;
+  }
 }

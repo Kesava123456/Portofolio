@@ -13,7 +13,7 @@ const Skills = () => {
                         These are some of the major languages, technologies, tools and platforms I have worked with:
                     </p>
 
-                    <h2>Languages</h2>
+                    <h3>Languages</h3>
                     <div className='languages-bg'>
                         <div className='separate-column'>
                             <img src="https://hithish.com/images/skills/python.png" alt="python" className='img' />
@@ -47,13 +47,20 @@ const Skills = () => {
                             <img src="./images/redux-logo-landscape.png" alt="redux" className='img' />
                             <p>React Redux</p>
                         </div>
+                    </div>
+                    <h3>Databases</h3>
+                    <div className='languages-bg'>
                         <div className='separate-column'>
-                            <img src="./images/icons8-linux-50.png" alt="router" className='img' />
-                            <p>Linux</p>
+                            <img src="https://hithish.com/images/skills/mysql.png" alt="html" className='img' />
+                            <p>MySQL</p>
+                        </div>
+                        <div className='separate-column'>
+                            <img src="https://hithish.com/images/skills/Mongo-db.png" alt="css" className='img' />
+                            <p>Mongo DB</p>
                         </div>
                     </div>
 
-                    <h3>Tools</h3>
+                    <h3>Tools & Platforms</h3>
                     <div className='languages-bg'>
                         <div className='separate-column'>
                             <img src="https://hithish.com/images/skills/git.png" alt="git" className='img' />
@@ -68,8 +75,12 @@ const Skills = () => {
                             <p>VS Code</p>
                         </div>
                         <div className='separate-column'>
-                            <img src="./images/icons8-shell-50.png" alt="vs" className='img' />
-                            <p>VS Code</p>
+                            <img src="https://hithish.com/images/skills/postman.png" alt="git" className='img' />
+                            <p>Postman</p>
+                        </div>
+                        <div className='separate-column'>
+                            <img src="https://hithish.com/images/skills/figma.png" alt="git" className='img' />
+                            <p>Figma</p>
                         </div>
                     </div>
                 </div>
