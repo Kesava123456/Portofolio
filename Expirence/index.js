@@ -11,7 +11,7 @@ export default function index() {
       </div>
       <style jsx>{`
         .container-timeline {
-          width: 100%;
+          width: 99%;
           height: 100%;
           display: flex;
           flex-direction: column;
