@@ -19,7 +19,7 @@ const Experience = () => {
               <div className="role-description">
                 <ul>
                   <li>
-                    I'm working on the Payce and RVW products, both of which are integral to payroll management solutions,
+                    I'm working on the Payce and RVW products, both of which are integral to Payroll management solutions,
                     focusing on delivering high-quality payroll solutions, and working on different statutories.
                     Identified and resolved critical issues, and tracked defects using Jira, rtrack, rtask.
                   </li>
