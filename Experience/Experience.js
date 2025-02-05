@@ -34,7 +34,7 @@ const Experience = () => {
                 </ul>
               </div>
             </div>
-            <div className="timeline-dot"></div> {/* Dot on the timeline line */}
+            <div className="timeline-dot"></div>
           </div>
         </div>
       </div>
