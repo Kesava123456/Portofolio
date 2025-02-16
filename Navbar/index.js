@@ -1,10 +1,17 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import './index.css';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const navLinkStyles=({isActive})=>{
+    return{
+      fontWeight:isActive ? 'bold' :'normal',
+      textDecoration: isActive ? 'None' : 'underline'
+      }
+  }
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen((prev) => !prev);
@@ -13,39 +20,44 @@ const Header = () => {
   return (
     <nav className="nav-header ">
       <div className="nav-content">
-        <Link to="/">
+        <NavLink style={navLinkStyles} to="/">
           <img
             src="./images/logo.png"
             className="website-logo"
             alt="website logo"
           />
-        </Link>
+        </NavLink>
         {/* Desktop Menu */}
         <ul className={`nav-menu ${isMobileMenuOpen ? 'nav-menu-open' : ''}`}>
           <li>
-            <Link to="/" className="nav-link">
+            <NavLink to="/" className="nav-link">
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/about" className="nav-link">
+            <NavLink to="/about" className="nav-link">
               About
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/education" className="nav-link">
+            <NavLink to="/education" className="nav-link">
               Education
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/skills" className="nav-link">
+            <NavLink to="/Expirence" className="nav-link">
+              Expirence
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/skills" className="nav-link">
               Skills
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/projects" className="nav-link">
+            <NavLink to="/projects" className="nav-link">
               Projects
-            </Link>
+            </NavLink>
           </li>
           <li>
             <a
@@ -55,11 +67,6 @@ const Header = () => {
             >
               Resume
             </a>
-          </li>
-          <li>
-            <Link to="/Expirence" className="nav-link">
-              Expirence
-            </Link>
           </li>
         </ul>
         {/* Mobile Menu Toggle */}
