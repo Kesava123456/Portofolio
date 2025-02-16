@@ -44,7 +44,7 @@ function Projects() {
                   className={`button ${
                     isWorkIcon ? "workButton" : "schoolButton"
                   }`}
-                  href="/"
+                  href="https://kkesava.ccbp.tech/"
                 >
                   {element.buttonText}
                 </a>

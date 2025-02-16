@@ -1,12 +1,12 @@
 body {
-  background: #091217;
+  background-color: rgb(18, 18, 18);
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   color: rgb(53, 53, 53);
 }
 
 .title {
-  padding-top:35px;
+  padding-top:40px;
   font-size: 3em;
   text-align: center;
   font-family: "Bebas Neue", sans-serif;
@@ -15,7 +15,6 @@ body {
 h3 {
   padding-top: 0.25em;
 }
-
 .vertical-timeline-element-content {
   box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
     0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
@@ -57,7 +56,7 @@ h3 {
   .vertical-timeline-element-date {
     display: block !important;
     float: none !important;
-    color: rgb(44, 44, 44);
+    color: rgb(242, 241, 241);
     margin-top: 1.5em;
   }
 }
