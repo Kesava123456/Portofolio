@@ -1,63 +1,34 @@
 let timelineElements = [
-    {
-      id: 1,
-      title: "Frontend Developer",
-      location: "Dragontail, Ascana",
-      description:
-        "Converting data to a graphical interface, through the use of HTML, CSS, and JavaScript, so that users can view and interact with that data.",
-      buttonText: "View Frontend Projects",
-      date: "August 2016 - present",
-      icon: "work",
-    },
-    {
-      id: 2,
-      title: "Backend Developer",
-      location: "Skystead, Craonia",
-      description:
-        "Working hand-in-hand with front-end developers by providing the outward facing web application elements server-side logic. Creating the logic to make the web app function properly, and accomplishing this through the use of server-side scripting languages.",
-      buttonText: "View Backend Projects",
-      date: "June 2013 - August 2016",
-      icon: "work",
-    },
-    {
-      id: 3,
-      title: "Quality Assurance Engineer",
-      location: "South Warren, Geshington",
-      description:
-        "Assessing the quality of specifications and technical design documents in order to ensure timely, relevant and meaningful feedback.",
-      buttonText: "Company Website",
-      date: "September 2011 - June 2013",
-      icon: "work",
-    },
-    {
-      id: 4,
-      title: "Oak Ridge College",
-      location: "South Warren, Geshington",
-      description:
-        "Online Course in Magical Beasts and Wonders of the World - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque sagittis tellus, non ultrices lacus tempus vel.",
-      buttonText: "Course Certificate",
-      date: "September 2011",
-      icon: "school",
-    },
-    {
-      id: 5,
-      title: "Hawking College",
-      location: "Skystead, Craonia",
-      description:
-        "College - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque sagittis tellus, non ultrices lacus tempus vel.",
-      buttonText: "College Projects",
-      date: "2007 - 2011",
-      icon: "school",
-    },
-    {
-      id: 6,
-      title: "Marble Hills Grammar School",
-      location: "Dragontail, Ascana",
-      description:
-        "Highschool - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque sagittis tellus, non ultrices lacus tempus vel.",
-      date: "2003 - 2007",
-      icon: "school",
-    },
-  ];
-  
-  export default timelineElements;
+  {
+    id: 1,
+    title: "Nxt Trendz",
+    location: "Tech stack :Javasrcipt, React js, REST Api's, Intigration api's, HTML, CSS",
+    description:
+      "Nxt Trendz is a dynamic ecommerce platform designed to cater to the diverse shopping needs of modern consumers products including clothing, electronics, toys, grocery items, and appliances",
+    buttonText: "View Frontend Projects",
+    date: "Nxt Tredz",
+    icon: "work",
+  },
+  {
+    id: 2,
+    title: "Online Event Booking Platform",
+    location: "Tech stack : HTML, CSS, Javasrcipt, react js, REST Api's, SQL, PHP",
+    description:
+      "Technologies I used were HTML, CSS, Bootstrap, react .js, SQL, and Node.js. The primary objective of our website is to provide a comprehensive and user-friendly platform for event management and minimize manual efforts for ticket booking..",
+    buttonText: "View Backend Projects",
+    date: "Online Event Booking Platform",
+    icon: "work",
+  },
+  {
+    id: 3,
+    title: "E-commerce Website", 
+    location: "Tech stack : HTML, CSS, Bootstrap, Javasrcipt, SQL",
+    description:
+      "This is Clothing E-commerce Webiste developed by web technologies, providing lot of Mens fahions,and users can easily order.",
+    buttonText: "Company Website",
+    date: "E-commerce Website",
+    icon: "work",
+  },
+];
+
+export default timelineElements;

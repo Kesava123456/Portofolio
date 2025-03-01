@@ -1,72 +1,62 @@
-.chrono-container {
-  width: 500px;
-  height: 800px;
+body {
+  background-color: rgb(18, 18, 18);
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: rgb(53, 53, 53);
 }
 
-.image {
-  width: 200px;
-  height: 200px;
-}
-.education-card{
-  align-items: start;
-  align-items:left;
-  text-align: left;
-  color:black;
-  font-size:20px;
+.title {
+  padding-top:40px;
+  font-size: 3em;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
 }
 
-.TimelineContainer {
-display: flex;
-justify-content: space-around;
-align-items: center;
-min-height: 100vh;
+h3 {
+  padding-top: 0.25em;
+}
+.vertical-timeline-element-content {
+  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
+    0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
+  padding: 2em 3em !important;
 }
 
-.ResponsiveContainer {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-max-width: 1110px;
-height: 100vh;
-}
-.HeaderContainer{
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-bottom: 30px;
-}
-.Heading{
-text-align: center;
-color: #171f46;
-font-family: 'Roboto';
-font-weight: 500;
-font-size: 18px;
-line-height: 2.7;
-margin: 0px;
-}
-.classHeading{
-margin-top:15px;
-font-size:30px;
-color:white;
-font-family: Arial, Helvetica, sans-serif;
+.date {
+  color: rgb(201, 251, 255);
 }
 
-.CCBPHeading{
-color: #2b237c;
-font-family: 'Roboto';
-font-weight: 500;
-font-size: 24px;
-margin: 0px;
+#description {
+  margin: 1.5em 0 2em 0;
 }
-.education-bg{
-background-color: rgb(19, 17, 17);
+
+.button {
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  color: white;
 }
-.education-head{
-color:rgb(6, 71, 97);
-font-family: Arial, Helvetica, sans-serif;
+
+.workButton {
+  background-color: #06d6a0;
 }
-.education-para{
-color:black;
-font-family: Arial, Helvetica, sans-serif;
+
+.workButton:hover {
+  background-color: #0ac593;
+}
+
+.schoolButton {
+  background-color: #f9c74f;
+}
+
+.schoolButton:hover {
+  background-color: #f3bc3c;
+}
+
+@media only screen and (max-width: 1700px) {
+  .vertical-timeline-element-date {
+    display: block !important;
+    float: none !important;
+    color: rgb(242, 241, 241);
+    margin-top: 1.5em;
+  }
 }

@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { MdMailOutline } from "react-icons/md";
@@ -5,49 +6,63 @@ import Navbar from "../Navbar";
 import "./index.css";
 
 const Home = () => {
-  const words = ["Front", "end", "Developer"];
+  const [currentTitle, setCurrentTitle] = useState("");
+  const [currentLetterIndex, setCurrentLetterIndex] = useState(0);
+  const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
+  const [showCursor, setShowCursor] = useState(true);
+
+  useEffect(() => {
+    const titles = ["Front End Developer.", "React Developer.", "Full Stack Developer."];
+  
+    if (currentLetterIndex < titles[currentTitleIndex].length) {
+      const timeout = setTimeout(() => {
+        setCurrentTitle(
+          (prev) => prev + titles[currentTitleIndex][currentLetterIndex]
+        );
+        setCurrentLetterIndex((prev) => prev + 1);
+      }, 150); 
+      return () => clearTimeout(timeout);
+    } else if (currentLetterIndex === titles[currentTitleIndex].length) {
+      const timeout = setTimeout(() => {
+        if (currentTitleIndex < titles.length - 1) {
+          setCurrentTitle("");
+          setCurrentLetterIndex(0);
+          setCurrentTitleIndex((prev) => prev + 1);
+        } else {
+          setCurrentTitle("");
+          setCurrentLetterIndex(0);
+          setCurrentTitleIndex(0);
+        }
+      }, 2000); // Pause before switching titles
+      return () => clearTimeout(timeout);
+    }
+  }, [currentLetterIndex, currentTitleIndex]);
+  
+
+  // Cursor blinking animation
+  useEffect(() => {
+    const cursorInterval = setInterval(() => {
+      setShowCursor((prev) => !prev);
+    }, 500); // Blinking speed
+    return () => clearInterval(cursorInterval);
+  }, []);
 
   return (
     <>
       <Navbar />
       <div className="home-container">
-        {/* Left-side Christmas image */}
-        <img
-          src="./left.png" // Replace with the path to your left image
-          alt="Christmas Decoration Left"
-          className="christmas-image left-image"
-        />
-
-        <h1 className="home-name">Katammagari Kesava</h1>
-        <h1 className="react-name">
-          I am a future
-          <span className="frontend-space">
-            {words.map((word, wordIndex) => (
-              <span key={wordIndex} className="animated-word">
-                {word.split("").map((letter, letterIndex) => (
-                  <span
-                    key={letterIndex}
-                    className="animated-letter"
-                    style={{
-                      animationDelay: `${wordIndex * 0.5 + letterIndex * 0.1}s`,
-                    }}
-                  >
-                    {letter}
-                  </span>
-                ))}
-                {/* Add a space after each word except the last one */}
-                {wordIndex < words.length - 1 && <span className="space"> </span>}
-              </span>
-            ))}
+        <h1 className="home-name">Kesava Katammagari</h1>
+        <h1 className="future-name">
+          I'm aspiring{" "}
+          <span className="animated-title">
+            {currentTitle}
+            {showCursor && <span className="cursor">|</span>}
           </span>
         </h1>
-
         <p className="home-para">
-          As a software developer, my ultimate objective is to transform
-          concepts into pleasurable and useful user experiences.
+        As an aspiring software developer, my goal is to turn innovative ideas into seamless user experiences. 
           <br />
-          I have strong experience working with complex business problems and
-          creating unique solutions.
+          I am passionate about solving complex problems and continuously learning new technologies.
         </p>
         <div className="icons">
           <a
@@ -70,10 +85,6 @@ const Home = () => {
             <MdMailOutline className="icon common-icon" />
           </a>
         </div>
-
-        {/* Right-side Christmas image */}
-        <img src="./chri.png" alt="Christmas Decoration Right"
-          className="christmas-image right-image" />
       </div>
     </>
   );

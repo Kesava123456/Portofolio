@@ -1,47 +1,67 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import './index.css';
 
-const Header = (props) => {
+const Header = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const navLinkStyles=({isActive})=>{
+    return{
+      fontWeight:isActive ? 'bold' :'normal',
+      textDecoration: isActive ? 'None' : 'underline'
+      }
+  }
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen((prev) => !prev);
+  };
+
   return (
-    <nav className="nav-header">
+    <nav className="nav-header ">
       <div className="nav-content">
-        <Link to="/">
+        <NavLink style={navLinkStyles} to="/">
           <img
             src="./images/logo.png"
             className="website-logo"
             alt="website logo"
           />
-        </Link>
-        <ul className="nav-menu">
+        </NavLink>
+        {/* Desktop Menu */}
+        <ul className={`nav-menu ${isMobileMenuOpen ? 'nav-menu-open' : ''}`}>
           <li>
-            <Link to="/" className="nav-link">
+            <NavLink to="/" className="nav-link">
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/about" className="nav-link">
+            <NavLink to="/about" className="nav-link">
               About
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/education" className="nav-link">
+            <NavLink to="/education" className="nav-link">
               Education
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/skills" className="nav-link">
+            <NavLink to="/Expirence" className="nav-link">
+              Expirence
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/skills" className="nav-link">
               Skills
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/projects" className="nav-link">
+            <NavLink to="/projects" className="nav-link">
               Projects
-            </Link>
+            </NavLink>
           </li>
           <li>
-            {/* Use an <a> tag for downloading the resume */}
             <a
-              href="./files/kesava_resume.pdf" // Update the path to your resume file
+              href="./files/kesava_resume.pdf"
               className="nav-link"
               download="My_Resume.pdf"
             >
@@ -49,28 +69,10 @@ const Header = (props) => {
             </a>
           </li>
         </ul>
-      </div>
-      <div className="nav-menu-mobile">
-        <ul className="nav-menu-list-mobile">
-          <Link to="/">
-            <li className="nav-menu-item-mobile">
-              <img
-                src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-home-icon.png"
-                alt="nav home"
-                className="nav-bar-image"
-              />
-            </li>
-          </Link>
-          <Link to="/products">
-            <li className="nav-menu-item-mobile">
-              <img
-                src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-products-icon.png"
-                alt="nav products"
-                className="nav-bar-image"
-              />
-            </li>
-          </Link>
-        </ul>
+        {/* Mobile Menu Toggle */}
+        <button className="mobile-menu-toggle" onClick={toggleMobileMenu}>
+          {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+        </button>
       </div>
     </nav>
   );

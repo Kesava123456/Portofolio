@@ -1,51 +1,73 @@
-import {Chrono} from 'react-chrono'
-import Navbar from '../Navbar/index.js'
+import React from "react";
+import { Chrono } from "react-chrono";
+import Navbar from "../Navbar/index.js"; // Adjust the import path as needed
+import "./index.css"; // Ensure you have the CSS file for custom styles
 
-import './index.css'
+const EducationTimeline = () => {
+  const items = [
+    {
+      title: "2020 - 2024",
+      cardTitle: "Computer Science and Engineering- CSE",
+      cardSubtitle: "Rajiv Gandhi University of Knowledge Technologies-Rk valley AP",
+      cardDetailedText:"CGPA : 8.2/10",
+    },
+    {
+      title: "2018 - 2020",
+      cardTitle: "PUC",
+      cardSubtitle: "Rajiv Gandhi University of Knowledge Technologies-Rk valley AP",
+      cardDetailedText:"CGPA : 8.23/10",
+    },
+    {
+      title: "- 2018",
+      cardTitle: "SSC",
+      cardSubtitle: "JMJ English medium High school",
+      cardDetailedText:"CGPA : 9.5/10",
+    },
+  ];
 
-
-const items=[{title:'2020-2024'},{title:'2018-2020'},{title:'-2018'}]
-  
-const Education =()=>{
-  return(
-  <>
-  <Navbar/>
-    <div className='education-bg'>
-    <div className="TimelineContainer">
-      <div className='ResponsiveContainer'>
-        <div className='HeaderContainer'>
-          <div className='classHeading'>
-            Education
-          </div>
-        </div>
+  return (
+    <>
+      <Navbar />
+      
+      <div className="BG">
+      <h1 className="head">Education</h1>
+      <div style={{ width: "100%", height: "100vh", padding: "20px" }}>
         <Chrono
-          theme={{
-            primary:'gray',
-          }}
+        className="bg-in"
           items={items}
-          mode="VERTICAL_ALTERNATING"
+          mode="VERTICAL" // You can change to HORIZONTAL or VERTICAL
+          theme={{
+            primary: "white",
+            secondary: "blue",
+            cardBgColor: "white", //#F5F5F5
+            titleColor: "white",
+            titleColorActive: "#FFC107",
+          }}
+          cardHeight={150}
+          scrollable={{ scrollbar: true }}
+          useReadMore={false} // Disable "Read More" button for full text visibility
         >
-        <div className='education-card'>
-            <h4 className='education-para'>BTech, Computer Science</h4>
-            <h1 className='education-head'>Rajiv Gandhi University of Knowledge technologies, Rk valley</h1>
-            <p>CGPA : 9.5/10</p>
-        </div>
-        <div>
-            <h4  className='education-para'>PUC, Computer Science</h4>
-            <h1 className='education-head'>Rajiv Gandhi University of Knowledge technologies, Rk valley</h1>
-            <p>CGPA : 8.23/10</p>
-        </div>
-        <div>
-            <h4  className='education-para'>SSC</h4>
-            <h1 className='education-head'>JMJ English medium high school</h1>
-            <p>CGPA : 9.5/10</p>
-        </div>
+          <div className="chrono-icons">
+            <img
+              src="https://img.icons8.com/color/48/000000/school.png"
+              alt="school"
+            />
+            <img
+              src="https://img.icons8.com/color/48/000000/graduation-cap.png"
+              alt="graduation"
+            />
+            <img
+              src="https://img.icons8.com/color/48/000000/artificial-intelligence.png"
+              alt="ai"
+            />
+          </div>
         </Chrono>
       </div>
-    </div>
-    </div>
-    )
-  </>
-  )
-}
-export default Education
+      </div>
+
+      
+    </>
+  );
+};
+
+export default EducationTimeline;

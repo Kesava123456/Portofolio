@@ -1,75 +1,61 @@
-import {Chrono} from 'react-chrono'
-import Navbar from '../Navbar/index.js'
+import timelineElements from "./timelineElements"
+import Navbar from '../Navbar'
+import "./index.css";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
 
-import './index.css'
+import "react-vertical-timeline-component/style.min.css";
 
+function Projects() {
+  let workIconStyles = { background: "#06D6A0" };
+  let schoolIconStyles = { background: "#f9c74f" };
 
-const items=[{title:'Nxt Trendz',cardTitle: "Go to web",  url:"https://kkesava.ccbp.tech/login"},
-  {title:'Online Event Booking platform'},{title:'Shoppers Stop'}]
-  
-const Projects =()=>{
-    return(
+  return (
     <>
     <Navbar/>
-    <div className='education-bg'>
-    <div className="TimelineContainer">
-      <div className='ResponsiveContainer'>
-        <div className='HeaderContainer'>
-        </div>
-        <Chrono
-          theme={{
-            titleColor: 'White',
-          }}
-          items={items} 
-          mode="VERTICAL"
-        >
-       <div>
-            <h1  className='education-para'>E-Commerse Applicatoin</h1>
-            <ul>
-              <li>FrontEnd Tech :</li>
-              <ul>
-              <li>Html, Css, Javscript, React js</li>
-              </ul>
-              <li>BackEnd Tech :</li>
-              <ul>
-              <li>RESP API's</li>
-              </ul>
-            </ul>
-            <ul>
-              <li>Technologies I used were HTML, CSS, Bootstrap, react .js, SQL, and Node.js</li>
-            </ul>
-        </div>
-        <div>
-            <h1  className='education-para'>Online Event Booking platform</h1>
-            <ul>
-              <li>FrontEnd Tech :</li>
-              <ul>
-              <li>Html, Css, Javscript, React js</li>
-              </ul>
-              <li>BackEnd Tech :</li>
-              <ul>
-              <li>SQL, Node js</li>
-              </ul>
-            </ul>
-            <ul>
-              <li>Technologies I used were HTML, CSS, Bootstrap, react .js, SQL, and Node.js</li>
-            </ul>
-        </div>
-        <div>
-            <h1  className='education-para'>E-commerce Application</h1>
-            <ul>
-              <li>To build this Application, i used Web technologies.</li>
-              <li>This is Clothing e commerce Webiste developed by web technologies, providing lot of
-              mens fahions,and users can easily order.</li>
-            </ul>
-        </div>
-        
-        </Chrono>
-      </div>
-    </div>
-    </div>
-   
-    </>
-    )
+    <div>
+      <h1 className="title">projects</h1>
+      <VerticalTimeline>
+        {timelineElements.map((element) => {
+          let isWorkIcon = element.icon === "work";
+          let showButton =
+            element.buttonText !== undefined &&
+            element.buttonText !== null &&
+            element.buttonText !== "";
+
+          return (
+            <VerticalTimelineElement
+              key={element.key}
+              date={element.date}
+              dateClassName="date"
+              iconStyle={isWorkIcon ? workIconStyles : schoolIconStyles}
+            >
+              <h3 className="vertical-timeline-element-title">
+                {element.title}
+              </h3>
+              <h5 className="vertical-timeline-element-subtitle">
+                {element.location}
+              </h5>
+              <p id="description">{element.description}</p>
+              {showButton && (
+                <a
+                  className={`button ${
+                    isWorkIcon ? "workButton" : "schoolButton"
+                  }`}
+                  href="https://kkesava.ccbp.tech/"
+                >
+                  {element.buttonText}
+                </a>
+              )}
+            </VerticalTimelineElement>
+          );
+        })}
+      </VerticalTimeline>
+    </div></>
+
+    
+  );
 }
-export default Projects
+export default Projects;

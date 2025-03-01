@@ -1,133 +1,110 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar Container */
 .nav-header {
-    background: cover;
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid rgb(243, 243, 243);
-    background-color: rgb(19, 17, 17);
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .nav-header {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-  
-  .nav-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
-    max-width: 1110px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-  }
-  
-  .website-logo {
-    width: 110px;
-  }
-  
-  @media screen and (min-width: 768px) {
-    .website-logo {
-      width: 165px;
-    }
-  }
-  
+  background-color: #131313;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #f3f3f3;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+nav a.active{
+  text-decoration-line: underline;
+  text-decoration-thickness: 4px;
+  text-decoration-color:white;
+  font-weight:bold;
+}
+
+/* Navbar Content */
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  padding: 15px 0;
+}
+
+/* Website Logo */
+.website-logo {
+  width: 120px;
+  cursor: pointer;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  margin: 0 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: #eceff3;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #fbfbfb;
+}
+
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Mobile View Styles */
+@media screen and (max-width: 768px) {
   .nav-menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-self: flex-end;
-    flex: 1;
-    list-style-type: none;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  
-  @media screen and (max-width: 767px) {
-    .nav-menu {
-      display: none;
-    }
-  }
-  
-  .nav-link {
-    font-family:'';
-    text-decoration: none;
-    margin: 10px;
-    font-weight: 400;
-    font-size: 20px;
-    color: #eceff3;
-    font-weight: 500;
-  }
-  
-  .logout-desktop-btn {
-    font-family: 'Roboto';
-    font-weight: 600;
-    font-size: 10px;
-    padding: 8px 16px;
-    color: white;
-    background-color: #0967d2;
-    border: none;
-    border-radius: 4px;
-    margin-left: 14px;
-    cursor: pointer;
-  }
-  
-  @media screen and (max-width: 767px) {
-    .logout-desktop-btn {
-      display: none;
-    }
-  }
-  
-  .logout-mobile-btn {
-    border: none;
-    padding: 0px;
-    cursor: pointer;
-    background: transparent;
-  }
-  
-  @media screen and (min-width: 768px) {
-    .logout-mobile-btn {
-      display: none;
-    }
-  }
-  
-  .logout-icon {
-    width: 24px;
-  }
-  
-  .nav-menu-mobile {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #131313;
     width: 100%;
+    padding: 20px 0;
   }
-  
-  @media screen and (min-width: 768px) {
-    .nav-menu-mobile {
-      display: none;
-    }
-  }
-  
-  .nav-menu-list-mobile {
+
+  .nav-menu-open {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    height: 70px;
-    background-color: #e6f6ff;
-    flex: 1;
-    list-style-type: none;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding: 0px;
   }
-  
-  .nav-menu-item-mobile {
-    margin: 0px;
-    cursor: pointer;
+
+  .nav-menu li {
+    margin: 15px 0;
+    text-align: center;
   }
-  
-  .nav-bar-image {
-    width: 24px;
+
+  .mobile-menu-toggle {
+    display: block;
   }
-  
+}
+
+/* Responsive Logo */
+@media screen and (max-width: 480px) {
+  .website-logo {
+    width: 90px;
+  }
+}

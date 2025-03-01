@@ -1,237 +1,106 @@
-.home-bg{
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    text-align: center; 
-    display: inline-block;
-    
-}
-
-.home-head{
-  padding-top:10px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size:40px;
-  text-align: center;
-}
-.home-para{
-  font-size:25px;
-  text-align: center;
-  overflow: hidden;
-  white-space: nowrap;
-  width:100%;
-  animation:
-    typing 2s,
-    cursor .4s step-end- infinite alternate;
-}
-@keyframes cursor {
-  50%{border-color:transparent}
-}
-@keyframes typing {
-    from{width :0}
-}
-.home-para-one{
-  margin:20px;
-  padding:10px;
-  text-align: center;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size:23px;
-}
-.icon{
-  padding: 8px;
-  border-radius: 5px;
-
-}
-.icons{
-  padding: 115px;
-  margin:30px;
-  font-size:40px;
-}
 .home-container{
-  background-color: black;
+  background-color: rgb(18, 18, 18);
   color:white;
   align-content: center;
   justify-content: center;
   align-items: center;
   text-align: center;
+  position: relative;
+  height:100vh;
+  width: 100%;
 }
 .home-name{
-  font-family: "Gill Sans", sans-serif;
-  font-size:50px;
-  padding-top:50px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size:4em;
+  padding-top:140px;
+  padding-bottom: 10px;
   font-style:bold;
 }
-.home-react{
-  padding-bottom: 10px;
-  font-size:25px;
 
-}
-.home-para{
-  padding-top:15px;
-  font-family: "Gill Sans", sans-serif;
-  padding-top:10px;
-  font-size:20px;
-}
-/* General styles */
-.react-name{
-  
-}
 
 h1 {
   font-size: 2rem;
   color: #f8f6f6;
 }
 
-.animated-text {  
-  font-size:35px;
-  margin-left:10px;
-  display: inline-block;
+.future-name{
+  margin:10px;
+}
+.home-container {
+  text-align: center;
+  padding: 2rem;
 }
 
-.animated-text span {
-  display: inline-block;
-  opacity: 0;
-  animation: fadeIn 0.5s forwards;
+.react-name {
+  font-weight: bold;
+  color: #f2eded;
+  margin: 1rem 0;
 }
-
-/* Add space between "react" and "developer" */
-.space {
-  display: inline-block;
-  width: 20px; /* Adjust width as needed for space */
-}
-
-/* Animation for "react" */
-.react span:nth-child(1) { animation-delay: 0.1s; }
-.react span:nth-child(2) { animation-delay: 0.2s; }
-.react span:nth-child(3) { animation-delay: 0.3s; }
-.react span:nth-child(4) { animation-delay: 0.4s; }
-.react span:nth-child(5) { animation-delay: 0.5s; }
-
-/* Animation for "developer" with delay to start after "react" */
-.developer span:nth-child(1) { animation-delay: 1s; }
-.developer span:nth-child(2) { animation-delay: 1.1s; }
-.developer span:nth-child(3) { animation-delay: 1.2s; }
-.developer span:nth-child(4) { animation-delay: 1.3s; }
-.developer span:nth-child(5) { animation-delay: 1.4s; }
-.developer span:nth-child(6) { animation-delay: 1.5s; }
-.developer span:nth-child(7) { animation-delay: 1.6s; }
-.developer span:nth-child(8) { animation-delay: 1.7s; }
-.developer span:nth-child(9) { animation-delay: 1.8s; }
-
-/* Animation styles */
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-.common-icon {
-  color: #ebf4f8; /* Change this to your desired color */
-  font-size: 2rem; /* Adjust the size as needed */
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
+.home-para {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size:19px;
+  margin: 1rem 0;
+  margin-top:40px;
 }
 
 .icon-link {
-  margin: 0 10px; /* Add some spacing between icons */
-  text-decoration: none; /* Remove underline from links */
+  color: inherit;
+  text-decoration: none;
 }
-
+.common-icon {
+  font-size: 2rem;
+  transition: transform 0.3s;
+}
 .common-icon:hover {
-  opacity: 0.7; /* Slightly fade the icon on hover */
+  transform: scale(1.2);
+  color: #fbfbfb;
 }
-.space {
-  display: inline-block; /* Ensure it behaves like a block element */
-  width: 5px; /* Adjust this value to increase/decrease space */
+.icon{
+  padding: 15px;
+  border-radius: 5px;
 }
-
-.animated-text {
-  margin-right: 5px; /* Optional: Add right margin to the first animated text */
-}
-.react-name {
-  display: flex;
-  align-items: center; /* Align items vertically centered */
+.icons{
+  padding: 115px;
+  font-size:40px;
 }
 
-.animated-word {
-  display: inline-flex; /* Ensure letters are in a row */
-}
+@media (max-width: 768px) {
+  .home-name {
+    font-size: 2.5rem;
+  }
 
-.animated-letter {
-  opacity: 0; /* Start as invisible */
-  animation: fadeIn 0.5s forwards; /* Animation for fading in */
-}
+  .future-name {
+    font-size: 1.5rem;
+  }
 
-@keyframes fadeIn {
-  to {
-    opacity: 1; /* Fade in to visible */
+  .home-para {
+    font-size: 0.9rem;
+  }
+
+  .common-icon {
+    font-size: 1.5rem;
   }
 }
-.home-container {
-  display: flex;
-  flex-direction: column; /* Stack children vertically */
-  align-items: center; /* Center horizontally */
-  justify-content: center; /* Center vertically if needed */
-  height: 100vh; /* Full viewport height for vertical centering */
-}
 
-.react-name {
-  display: flex;
-  align-items: center; /* Align items vertically centered */
-  justify-content: center; /* Center the text horizontally */
-}
+@media (max-width: 480px) {
+  .home-name {
+    font-size: 2rem;
+  }
 
-.animated-word {
-  display: inline-flex; /* Ensure letters are in a row */
-}
+  .future-name {
+    font-size: 1.2rem;
+  }
 
-.animated-letter {
-  opacity: 0; /* Start as invisible */
-  animation: fadeIn 0.5s forwards; /* Animation for fading in */
-}
+  .home-para {
+    font-size: 0.8rem;
+  }
 
-@keyframes fadeIn {
-  to {
-    opacity: 1; /* Fade in to visible */
+  .icons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .common-icon {
+    font-size: 1.2rem;
   }
 }
-  .frontend-space {
-    font-size: 40px;
-    margin-left: 20px; /* Adjust this value for desired space */
-  }
-.frontend-space {
-  display: flex; /* Use flexbox for alignment */
-}
-
-.space {
-  width: 10px; /* Adjust this value for desired space between words */
-}
-
-
-
-
-
-.home-container {
-  position: relative;
-  text-align: center;
-  padding: 20px;
-}
-
-.christmas-image {
-  position: absolute;
-  width: 150px;
-  height: auto;
-}
-
-.left-image {
-  width:150px;
-  height:230px;
-  top: 0%;
-  left: 0%;
-}
-
-.right-image {
-  bottom: 0%;
-  right: 5%;
-  width:300px;
-  height:700px;
-  margin-bottom: 100px;
-}
-
