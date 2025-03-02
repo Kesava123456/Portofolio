@@ -61,12 +61,12 @@ const Header = () => {
           </li>
           <li>
             <a
-              href="./files/kesava_resume.pdf"
-              className="nav-link"
-              download="My_Resume.pdf"
-            >
-              Resume
-            </a>
+  href={`${process.env.PUBLIC_URL}/files/kesava_resume.pdf`}
+  className="nav-link"
+  download="My_Resume.pdf"
+>
+  Resume
+</a>
           </li>
         </ul>
         {/* Mobile Menu Toggle */}
