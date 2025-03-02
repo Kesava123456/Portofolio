@@ -61,7 +61,7 @@ const Header = () => {
           </li>
           <li>
             <a
-  href={`${process.env.PUBLIC_URL}/files/kesava_resume.pdf`}
+  href="./files/kesava_resume.pdf"
   className="nav-link"
   download="My_Resume.pdf"
 >
